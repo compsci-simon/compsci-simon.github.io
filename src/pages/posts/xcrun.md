@@ -9,7 +9,8 @@ pubDate: "25 Nov 2022"
 I just recently updated my mac to macOS Ventura v13.0.1 and tried to commit some new changes to my repo when I got the error:
 
 ```bash
-$ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+$ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools),
+missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 ```
 
 This is due to macOS uninstalling commandline tools with the recent update. To fix the issue simply run `xcode-select --install`.

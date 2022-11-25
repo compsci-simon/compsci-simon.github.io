@@ -33,14 +33,14 @@ article {
   border-radius: 20px;
   padding: 20px;
   background-color: white;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto 0 auto;
 }
 
 .post-content {
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;;
   margin-top: 40px;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 25px;
   font-weight: 500;
   color: rgb(86, 86, 86);
