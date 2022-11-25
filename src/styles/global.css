@@ -50,3 +50,13 @@ article {
   margin-top: 40px;
   font-weight: 500;
 }
+
+pre.astro-code {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px -1px #7809b0;
+}
+
+pre.astro-code:hover {
+  cursor: pointer;
+}

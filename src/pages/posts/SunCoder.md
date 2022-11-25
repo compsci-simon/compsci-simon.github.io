@@ -3,7 +3,7 @@ layout: "../../layouts/MarkdownLayout.astro"
 title: "SunCoder"
 subtitle: "An online programming platform."
 url: "SunCoder"
-pubDate: "25 Nov 2022"
+pubDate: "11-25-2022"
 ---
 
 During the past year I created an online programming platform that can be thought of as a mixture between edX and LeetCode.
