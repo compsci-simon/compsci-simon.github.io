@@ -10,7 +10,7 @@ const allPosts = await Astro.glob('../pages/posts/*.md')
 		<Avatar />
 		<h1 class="gradient-text">Simon's blog</h1>
 		<div class='posts'>
-			{allPosts.map((post) => <Card title={post.frontmatter.title} url={post.frontmatter.url} subtitle={post.frontmatter.subtitle} />)}
+			{allPosts.map((post) => <Card title={post.frontmatter.title} url={post.frontmatter.url} minutesRead={post.frontmatter.minutesRead} subtitle={post.frontmatter.subtitle} />)}
 		</div>
 		<Footer />
 </BaseLayout>

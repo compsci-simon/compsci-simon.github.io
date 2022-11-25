@@ -20,7 +20,7 @@ If that did not work then you may need to reset xcode installation.
 1. Check if Xcode is installed
 
 ```bash
-xcode-select -print-path
+$ xcode-select -print-path
 
 # If the output of the above command is not similar to the following line, Xcode is not installed. Skip to Step 3.
 # /Library/Developer/CommandLineTools
@@ -30,14 +30,14 @@ xcode-select -print-path
 
 ```bash
 # Remove the Developer directory
-sudo rm -rf $(xcode-select -print-path)
+$ sudo rm -rf $(xcode-select -print-path)
 
 # Remove the CommandLineTools directory
-sudo rm -rf /Library/Developer/CommandLineTools
+$ sudo rm -rf /Library/Developer/CommandLineTools
 ```
 
 3. Install Xcode
 
 ```bash
-sudo xcode-select --install
+$ sudo xcode-select --install
 ```

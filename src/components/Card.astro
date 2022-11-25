@@ -1,10 +1,11 @@
 ---
-const { title, subtitle, url } = Astro.props
+const { title, subtitle, minutesRead, url } = Astro.props
 ---
 <a href={`/posts/${url}`} class="drop-shadow-md">
   <div>
     <h2 class="text-3xl group-hover:text-purple-500">{title} &rarr;</h2>
     <p class="text-slate-600 group-hover:text-slate-800">{subtitle}</p>
+    <em class='time-to-read'><span class='clock'>⏱</span> {minutesRead}</em>
   </div>
 </a>
 
@@ -40,5 +41,15 @@ a:hover {
 }
 a:is(:hover, :focus-within) h2 {
   color: rgb(124, 58, 237);
+}
+
+.time-to-read {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.clock {
+  font-size: 20px;
+  line-height: 20px;
 }
 </style>
