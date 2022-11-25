@@ -1,9 +1,29 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import '../styles/global.css'
-
-const pageTitle = "Home Page"
+import Avatar from "../components/Avatar.astro";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const allPosts = await Astro.glob('../pages/posts/*.md')
 ---
-<BaseLayout pageTitle={pageTitle}>
-	<h2>My awesome blog subtitle</h2>
+
+<BaseLayout>
+		<Avatar />
+		<h1 class="gradient-text">Simon's blog</h1>
+		<div class='posts'>
+			{allPosts.map((post) => <Card title={post.frontmatter.title} url={post.frontmatter.url} subtitle={post.frontmatter.subtitle} />)}
+		</div>
+		<Footer />
 </BaseLayout>
+
+<style>
+	h1 {
+		margin-top: 10px;
+		margin-bottom: 40px;
+	}
+
+	.posts {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+</style>

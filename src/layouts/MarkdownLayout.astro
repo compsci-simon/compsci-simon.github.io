@@ -1,0 +1,32 @@
+---
+import BaseLayout from "./BaseLayout.astro"
+
+const { title, subtitle, pubDate } = Astro.props.frontmatter
+---
+
+<BaseLayout>
+  <article>
+    <h2 class="post-title">{title}</h2>
+    <h3 class='post-subtitle'>{subtitle}</h3>
+    {pubDate &&
+      <p class="subtitle">Published on: {pubDate}</p>
+    }
+    <a href='/' class="home-button">&larr;Back</a>
+    <hr />
+    <div class="post-content">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .home-button {
+    text-decoration: none;
+    color: black;
+  }
+  hr {
+    height: 1px;
+    border: 0;
+    background-color: rgb(152, 152, 152);
+  }
+</style>
