@@ -3,7 +3,7 @@ import Avatar from "../components/Avatar.astro";
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-const allPosts = await Astro.glob('../pages/posts/*.md')
+const allPosts = await Astro.glob('../pages/posts/*.(md|mdx)')
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 ---
 

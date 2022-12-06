@@ -2,6 +2,12 @@ import { defineConfig } from 'astro/config';
 import { remarkReadingTime } from './remark-reading-time.mjs';
 
 // https://astro.build/config
+import mdx from "@astrojs/mdx";
+
+// https://astro.build/config
+import image from "@astrojs/image";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://compsci-simon.github.io',
   markdown: {
@@ -16,7 +22,8 @@ export default defineConfig({
       // https://github.com/shikijs/shiki/blob/main/docs/languages.md
       langs: [],
       // Enable word wrap to prevent horizontal scrolling
-      wrap: true,
-    },
-  }
+      wrap: true
+    }
+  },
+  integrations: [mdx(), image()]
 });

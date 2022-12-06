@@ -6,6 +6,8 @@ subtitle: "Taking your crypto from a centralised exchange to your own wallet."
 pubDate: "12-05-2022"
 ---
 
+import { Picture } from "@astrojs/image/components";
+
 Like most people, when I first got involved in crypto, I had bought all of my crypto through a centralised exchange. This is fine, but in light of the recent events at FTX.com I became a bit less confident that my bitcoin was safe in the hands of some company.
 
 First let us understand the different types of bitcoin wallets. This actually holds for all of crypto but I want to be specific to bitcoin.
@@ -22,8 +24,11 @@ This is where you and only you know the key to your bitcoin wallet. The key is 2
 
 I decided to use bitcoin.com's wallet as my new non-custodial wallet as they have a slick interface and provide lots of detail on how to set up your wallet with them. Once you have downloaded the app, sign-in and select your bitcoin wallet. Then select the options menu and click on 'show my recovery phrase'. You should then see your 12 word recovery phrase. Write this down on paper and keep it safe.
 
-<!-- ![Recovery phrase](/public/bitcoin/recovery_phrase.jpeg) -->
-<img src='/public/bitcoin/recovery_phrase.jpeg' style='width: 200px; margin: 0 auto 0 auto; display: block; border: 1px solid black'>
+<img
+	src='/assets/recovery_phrase.jpeg'
+	alt='Wallet recovery phrase'
+	style='width: 200px; margin: 0 auto 0 auto; display: block; border: 1px solid black'
+/>
 
 I deleted this wallet from my account as you do not want anyone to see this.
 
@@ -35,7 +40,10 @@ First you will need to enable sending crypto from Luno's platform, which takes 2
 
 Go to your bitcoin.com app and copy the address of your bitcoin wallet in the bitcoin.com app and then go back to Luno.
 
-<img src='/public/bitcoin/bitcoin_address.jpeg' style='width: 200px; margin: 0 auto 0 auto; display: block; border: 1px solid black'>
+<img
+	src='/assets/bitcoin_address.jpeg'
+	style='width: 200px; margin: 0 auto 0 auto; display: block; border: 1px solid black'
+/>
 
 Paste the address in and continue to send your bitcoin.
 
